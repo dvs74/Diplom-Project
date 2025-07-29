@@ -7,6 +7,15 @@ export async function sendForm(data) {
 Телефон: ${data.phone}
 Сообщение: ${data.comment}`;
 
+  const existingLeads = JSON.parse(localStorage.getItem("leads")) || [];
+  const newLead = {
+    name: data.name,
+    phone: data.phone,
+    comment: data.comment,
+    date: new Date().toLocaleString(),
+  };
+  localStorage.setItem("leads", JSON.stringify([...existingLeads, newLead]));
+
   try {
     const response = await fetch(
       `https://api.telegram.org/bot${token}/sendMessage`,

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function AdminPanel() {
-  const [leads, setLeads] = useState([]);
+  const [leads, setLeads] = useState([]); /* Деструктуризация массива*/
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("leads")) || [];

@@ -1,4 +1,5 @@
-// src/components/Footer.jsx
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -12,6 +13,15 @@ export default function Footer() {
           </p>
         </div>
       </div>
+      {
+        <Link
+          to="/"
+          className="footer-home-link"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          ⏮ Вернуться в начало страницы
+        </Link>
+      }
     </footer>
   );
 }

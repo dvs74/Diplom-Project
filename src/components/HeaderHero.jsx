@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function HeaderHero() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // Состояние для мобильного меню
+  const [servicesOpen, setServicesOpen] = useState(false); // Состояние для выпадающего меню услуг
 
   return (
     <section className="header-hero">
@@ -72,7 +72,7 @@ export default function HeaderHero() {
           </ul>
         </nav>
 
-        {/* 📍 Основной блок */}
+        {/*Основной блок */}
         <div className="header-hero-columns">
           <div className="clinic-info-centered">
             <h1 className="clinic-name">Центр “Здоровая Жизнь”</h1>
@@ -105,7 +105,7 @@ export default function HeaderHero() {
                 <img src="/icons/telegram.png" alt="Telegram" />
               </a>
               <a href="https://vk.com/clinic" target="_blank" rel="noreferrer">
-                <img src="/icons/vk.png" alt="ВКонтакте" />
+                <img src="/icons/vk1.png" alt="ВКонтакте" />
               </a>
             </div>
           </div>

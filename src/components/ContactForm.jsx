@@ -1,8 +1,10 @@
 // src/components/ContactForm.jsx
 import { useState } from "react";
 import { sendForm } from "../utils/sendForm"; // вспомогательная функция
+import { useNavigate } from "react-router-dom";
 
 export default function ContactForm() {
+  const navigate = useNavigate();
   const [data, setData] = useState({ name: "", phone: "", comment: "" });
   const [submitted, setSubmitted] = useState(false);
 
@@ -15,6 +17,9 @@ export default function ContactForm() {
     sendForm(data).then(() => {
       setSubmitted(true);
       setData({ name: "", phone: "", comment: "" });
+      setTimeout(() => {
+        navigate("/thank-you");
+      }, 2500); // ⏳ через 2.5 сек
     });
   };
 
@@ -26,7 +31,6 @@ export default function ContactForm() {
           Спасибо! Мы свяжемся с вами в ближайшее время.
         </p>
       )}
-
       <input
         type="text"
         name="name"
