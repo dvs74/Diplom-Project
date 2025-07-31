@@ -568,3 +568,27 @@ h2 {
   flex-grow: 1;
   padding: 20px;
 }
+@media (max-width: 768px) {
+  .hero-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    text-align: center;
+  }
+
+  .hero-phone {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0.4rem 0.8rem;
+    white-space: normal;
+    word-break: break-word;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+  }
+
+  .hero-call-btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+}
