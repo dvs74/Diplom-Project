@@ -34,7 +34,7 @@ export default function Contacts() {
           <a href="mailto:info@clinic.ru">info@clinic.ru</a>
         </li>
         <li>
-          <strong>Адрес:</strong> г. Москва, ул. Здоровья, д. 1
+          <strong>Адрес:</strong> ул. Примерная, д. 1, офис 101
         </li>
       </ul>
     </section>
